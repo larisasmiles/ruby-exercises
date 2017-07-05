@@ -15,4 +15,3 @@ class CandyTest < Minitest::Test
     assert_equal "Mars", candy.type
   end
 end
-

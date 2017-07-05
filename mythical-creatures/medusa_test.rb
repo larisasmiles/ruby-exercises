@@ -10,7 +10,7 @@ class MedusaTest < Minitest::Test
   end
 
   def test_when_first_created_she_has_no_statues
-    skip
+    # skip
     medusa = Medusa.new("Cassiopeia")
     assert medusa.statues.empty?
   end

@@ -10,19 +10,19 @@ class PirateTest < Minitest::Test
   end
 
   def test_can_have_different_name
-    skip
+    # skip
     pirate = Pirate.new("Blackbeard")
     assert_equal "Blackbeard", pirate.name
   end
 
   def test_is_a_scallywag_by_default
-    skip
+    # skip
     pirate = Pirate.new("Jack")
     assert_equal 'Scallywag', pirate.job
   end
 
   def test_in_not_always_a_scallywag
-    skip
+    # skip
     pirate = Pirate.new("Jack", "Cook")
     assert_equal "Cook", pirate.job
   end
