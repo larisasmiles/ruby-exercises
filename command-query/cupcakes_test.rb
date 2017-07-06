@@ -2,22 +2,24 @@ gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
 require_relative 'cupcakes'
+require 'pry'
 
 class CupcakesTest < Minitest::Test
   def test_sweetest_when_no_cupcakes
-    cupcakes = Cupcake.new
+    cupcakes = Cupcakes.new
     assert_nil cupcakes.sweetest
   end
 
   def test_sweetest_with_only_one_left
     # skip
     cupcakes = Cupcakes.new
+    # binding.pry
     cupcakes << Cupcake.new("Carrot", 5) # 5 grams of sugar
     assert_equal "Carrot", cupcakes.sweetest.flavor
   end
 
   def test_sweetest_cupcake
-    skip
+    # skip
     cupcakes = Cupcakes.new
     cupcakes << Cupcake.new("Carrot", 5)
     cupcakes << Cupcake.new("Caramel", 12)
